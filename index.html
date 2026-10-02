@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#7f3cff" />
+  <meta name="description" content="Berry Vibes Studio — a playful interactive Cozy Core Diet website for recipes, food, movement, water, fasting, battles and Berry Burst." />
+  <title>Berry Vibes Studio · CCD Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="berry-sky" aria-hidden="true">
+    <span>🍓</span><span>🫐</span><span>✨</span><span>🍒</span><span>💜</span><span>🍓</span><span>⭐</span><span>🫐</span>
+  </div>
+
+
+  <section class="auth-gate" id="authGate" aria-label="Berry Vibes local sign in">
+    <div class="auth-card candy-card">
+      <div class="auth-art">
+        <div class="auth-logo">🍓</div>
+        <span class="eyebrow">BERRY VIBES STUDIO</span>
+        <h1>YOUR CCD PLAYGROUND STARTS HERE. 🎮✨</h1>
+        <p>SIGN IN TO YOUR LOCAL BERRY PROFILE OR CREATE ONE. YOUR WEBSITE DATA STAYS IN THIS BROWSER.</p>
+        <div class="auth-bubbles"><span>🍓 FOOD</span><span>🚶🏽‍♀️ MOVE</span><span>⏳ FAST</span><span>🏆 BATTLE</span></div>
+      </div>
+      <div class="auth-panel">
+        <div class="auth-tabs" role="tablist">
+          <button id="authSignInTab" class="active" type="button">SIGN IN</button>
+          <button id="authSignUpTab" type="button">SIGN UP</button>
+        </div>
+        <form id="signInForm" class="auth-form">
+          <label>EMAIL<input id="signInEmail" class="control" type="email" autocomplete="email" required placeholder="YOU@EXAMPLE.COM" /></label>
+          <label>PASSWORD<input id="signInPassword" class="control" type="password" autocomplete="current-password" minlength="6" required placeholder="••••••••" /></label>
+          <button class="primary-button full" type="submit">ENTER BERRY VIBES 🍓</button>
+        </form>
+        <form id="signUpForm" class="auth-form hidden" hidden>
+          <label>DISPLAY NAME<input id="signUpName" class="control" type="text" maxlength="30" required placeholder="BERRY BESTIE" /></label>
+          <label>EMAIL<input id="signUpEmail" class="control" type="email" autocomplete="email" required placeholder="YOU@EXAMPLE.COM" /></label>
+          <label>PASSWORD<input id="signUpPassword" class="control" type="password" autocomplete="new-password" minlength="6" required placeholder="6+ CHARACTERS" /></label>
+          <button class="primary-button full" type="submit">CREATE LOCAL PROFILE ✨</button>
+        </form>
+        <p class="auth-note">STATIC GITHUB MODE: THIS IS A LOCAL-DEVICE PROFILE, NOT SERVER AUTHENTICATION. DON’T REUSE A SENSITIVE PASSWORD HERE.</p>
+      </div>
+    </div>
+  </section>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Berry Vibes Studio home">
+      <span class="brand-mark">🍓</span>
+      <span><b>BERRY VIBES</b><small>CCD PLAYGROUND</small></span>
+    </a>
+    <nav class="nav-pills" aria-label="Primary navigation">
+      <a href="#today">TODAY</a><a href="#sotd">SOTD</a><a href="#restaurants">RESTAURANTS</a><a href="#recipes">RECIPES</a><a href="#studio">STUDIO</a><a href="#battle">BATTLE</a><a href="#game">PLAY</a>
+    </nav>
+    <div class="top-actions"><span class="user-chip" id="authUserChip">LOCAL PROFILE</span><button class="icon-button" id="openProfile" type="button" aria-label="Open profile">👤</button><button class="icon-button" id="signOut" type="button" aria-label="Sign out">↪</button></div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell" aria-labelledby="heroTitle">
+      <div class="hero-copy candy-card violet-card">
+        <div class="eyebrow" id="greeting">GOOD AFTERNOON ✨</div>
+        <h1 id="heroTitle">LET’S MAKE <span>BERRY VIBES</span> PLAYABLE. 🍓🎮</h1>
+        <p>LOG FOOD. MOVE. HYDRATE. FAST. COOK. BATTLE. PLAY. REPEAT — ALL IN ONE COLORFUL GITHUB WEBSITE.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#today">START TODAY ✨</a>
+          <a class="secondary-button" href="#game">PLAY BERRY BURST 🎮</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="heroRecipeCount">212</strong><span>CCD RECIPES</span></div>
+          <div><strong id="heroXp">0</strong><span>BERRY XP</span></div>
+          <div><strong id="heroWater">0</strong><span>OZ WATER</span></div>
+        </div>
+      </div>
+      <div class="hero-visual candy-card photo-card">
+        <img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1200&q=82" alt="Stack of pancakes photographed on a plate" />
+        <div class="photo-badge">CCD COZY MODE ✨</div>
+        <div class="orbit orbit-one">🍓</div><div class="orbit orbit-two">⭐</div><div class="orbit orbit-three">🫐</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Berry Vibes moving message">
+      <div class="ticker-track"><span>🍓 LOG IT ✦ 🥯 MAKE IT ✦ 💧 SIP IT ✦ 🚶🏽‍♀️ WALK IT ✦ 🎮 PLAY IT ✦ 🏆 BATTLE IT ✦ </span><span>🍓 LOG IT ✦ 🥯 MAKE IT ✦ 💧 SIP IT ✦ 🚶🏽‍♀️ WALK IT ✦ 🎮 PLAY IT ✦ 🏆 BATTLE IT ✦ </span></div>
+    </section>
+
+    <section class="shell section" id="today">
+      <div class="section-head"><div><span class="eyebrow">TODAY’S CCD BOARD</span><h2>YOUR DAY, BUT MAKE IT FUN. 😋✨</h2></div><button class="tiny-button" id="resetDay" type="button">RESET DAY ↻</button></div>
+
+      <div class="dashboard-grid">
+        <article class="candy-card log-card berry-card">
+          <div class="card-title"><span>🍽️</span><div><h3>FOOD LOG</h3><p>NO CALORIE OR MACRO TYPING.</p></div></div>
+          <label class="field-label" for="foodSelect">CHOOSE A CCD RECIPE</label>
+          <select id="foodSelect" class="control"></select>
+          <div class="range-row"><label for="foodServings">SERVING AMOUNT</label><output id="foodServingOut">1.0×</output></div>
+          <input id="foodServings" class="berry-range" type="range" min="0.5" max="4" step="0.5" value="1" />
+          <div class="mini-nutrition" id="foodPreview"></div>
+          <button class="primary-button full" id="logFood" type="button">LOG THIS FOOD +25 XP 🍓</button>
+        </article>
+
+        <article class="candy-card log-card aqua-card">
+          <div class="card-title"><span>🚶🏽‍♀️</span><div><h3>MOVEMENT LOG</h3><p>SLIDERS + AUTO BURN ESTIMATE.</p></div></div>
+          <label class="field-label" for="activitySelect">CHOOSE MOVEMENT</label>
+          <select id="activitySelect" class="control">
+            <option value="walk">GENTLE WALK 🚶🏽‍♀️</option><option value="yoga">YOGA 🧘🏽‍♀️</option><option value="barre">BARRE 🩰</option><option value="dance">JUST DANCE / MJ EXPERIENCE 🕺🏽</option><option value="pilates">PILATES ✨</option>
+          </select>
+          <div class="range-row"><label for="minutesRange">MINUTES</label><output id="minutesOut">20 MIN</output></div>
+          <input id="minutesRange" class="berry-range" type="range" min="5" max="120" step="5" value="20" />
+          <div class="burn-preview"><strong id="burnPreview">—</strong><span>EST. CALORIES BURNED</span></div><div class="movement-facts" id="movementFacts"></div>
+          <button class="primary-button full" id="logMovement" type="button">LOG MOVEMENT +20 XP ✨</button>
+        </article>
+
+        <article class="candy-card log-card blue-card">
+          <div class="card-title"><span>💧</span><div><h3>WATER</h3><p>ONE TAP. BIG SPLASH.</p></div></div>
+          <div class="water-orb"><strong id="waterTotal">0</strong><span>OZ TODAY</span></div>
+          <div class="quick-buttons"><button data-water="8">+8 OZ</button><button data-water="16">+16 OZ</button><button data-water="24">+24 OZ</button></div>
+          <div class="water-track"><span id="waterFill"></span></div>
+        </article>
+
+        <article class="candy-card log-card sunset-card">
+          <div class="card-title"><span>⏳</span><div><h3>FASTING TIMER</h3><p>START + STOP. THAT’S IT.</p></div></div>
+          <label class="field-label" for="fastType">CHOOSE FASTING STYLE</label>
+          <select id="fastType" class="control">
+            <option value="12:12">12:12 · GENTLE START 🌤️</option>
+            <option value="14:10">14:10 · EASY RHYTHM ✨</option>
+            <option value="16:8" selected>16:8 · CCD CLASSIC 🍓</option>
+            <option value="18:6">18:6 · LONGER WINDOW ⏳</option>
+            <option value="20:4">20:4 · SHORT EATING WINDOW 🌙</option>
+            <option value="23:1">23:1 · OMAD STYLE 🍽️</option>
+          </select>
+          <div class="fast-clock" id="fastClock">00:00:00</div>
+          <p class="fast-status" id="fastStatus">READY WHEN YOU ARE ✨</p>
+          <div class="fast-target-row"><span id="fastTargetLabel">TARGET · 16 HOURS</span><strong id="fastTargetPct">0%</strong></div>
+          <div class="fast-progress" aria-label="Fasting target progress"><span id="fastProgressFill"></span></div>
+          <div class="quick-buttons"><button id="fastStart">START</button><button id="fastStop">STOP + SAVE</button></div>
+        </article>
+      </div>
+
+      <div class="summary-grid">
+        <article class="candy-card summary-card"><span>🔥</span><strong id="calorieTotal">0</strong><small>FOOD CALORIES</small></article>
+        <article class="candy-card summary-card"><span>💪🏽</span><strong id="proteinTotal">0G</strong><small>PROTEIN</small></article>
+        <article class="candy-card summary-card"><span>🌾</span><strong id="fiberTotal">0G</strong><small>FIBER</small></article>
+        <article class="candy-card summary-card"><span>✨</span><strong id="burnTotal">0</strong><small>MOVEMENT BURN</small></article>
+      </div>
+
+      <article class="candy-card maintenance-card" aria-label="Maintenance reference">
+        <div class="maintenance-copy"><span class="eyebrow">MAINTENANCE REFERENCE</span><h3>2,100–2,150 KCAL 💜</h3><p id="maintenanceText">YOUR FOOD TOTAL WILL SHOW HERE · MOVEMENT BURN STAYS SEPARATE.</p></div>
+        <div class="maintenance-track"><span id="maintenanceFill"></span></div>
+      </article>
+
+      <div class="charts-layout">
+        <article class="candy-card chart-card">
+          <div class="section-mini"><span class="eyebrow">HORIZONTAL MACROS</span><h3>DAY-SO-FAR BARS 📊</h3></div>
+          <div id="macroBars" class="macro-bars"></div>
+        </article>
+        <article class="candy-card chart-card">
+          <div class="section-mini"><span class="eyebrow">HORIZONTAL FOOD PYRAMID</span><h3>CCD PLATE MIX 🍽️</h3></div>
+          <div id="pyramidBars" class="pyramid-bars"></div>
+        </article>
+      </div>
+
+      <article class="candy-card timeline-card">
+        <div class="section-mini"><span class="eyebrow">TODAY’S STORY</span><h3>LIVE LOG ✨</h3></div>
+        <div id="todayLog" class="today-log"><div class="empty-state">YOUR FIRST LOG WILL POP UP HERE 🍓</div></div>
+      </article>
+    </section>
+
+
+    <section class="shell section" id="sotd">
+      <div class="section-head"><div><span class="eyebrow">SOTD ARCADE 🍪</span><h2>SNACK OF THE DAY — ZERO TYPING. 🎰✨</h2></div><button class="tiny-button" id="randomSotd" type="button">SPIN SOTD 🎲</button></div>
+      <div class="sotd-layout">
+        <article class="candy-card sotd-photo-card">
+          <img id="sotdImage" src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1100&q=82" alt="Chocolate cookies and snack photography" />
+          <div class="photo-badge">TODAY'S FUN PICK 🍫</div>
+        </article>
+        <article class="candy-card sotd-control-card">
+          <div class="card-title"><span>🍪</span><div><h3>CHOOSE FROM YOUR SOTD VAULT</h3><p>ARCHIVED FAVORITES + AUTO NUTRITION. NO MACRO TYPING.</p></div></div>
+          <label class="field-label" for="sotdSelect">SOTD</label>
+          <select id="sotdSelect" class="control"></select>
+          <div class="range-row"><label for="sotdQty">PORTION</label><output id="sotdQtyOut">1×</output></div>
+          <input id="sotdQty" class="berry-range" type="range" min="1" max="3" step="1" value="1" />
+          <div class="mini-nutrition" id="sotdPreview"></div>
+          <p class="nutrition-note" id="sotdNote">RECORDED CALORIES ARE KEPT WHEN AVAILABLE; OTHERWISE THE CARD SAYS ESTIMATE.</p>
+          <button class="primary-button full" id="logSotd" type="button">LOG SOTD +25 XP 🍓</button>
+        </article>
+        <article class="candy-card sotd-wheel-card">
+          <span class="big-emoji" id="sotdEmoji">🍫</span>
+          <span class="eyebrow">TODAY'S PICK</span>
+          <h3 id="sotdPickName">OREOS</h3>
+          <p id="sotdPickMeta">3–6 COOKIES · MAX 6</p>
+          <button class="secondary-button full" id="pickSotd" type="button">USE THIS PICK ✨</button>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="shell section" id="restaurants">
+      <div class="section-head"><div><span class="eyebrow">RESTAURANT QUEST 🍔☕️</span><h2>FAST FOOD + RESTAURANT LOGGING — AUTO NUTRITION. 🏆</h2></div><span class="studio-badge">VERIFIED DATA WHEN AVAILABLE ✅</span></div>
+      <div class="restaurant-layout">
+        <article class="candy-card restaurant-photo-card">
+          <img id="restaurantImage" src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=82" alt="Burger and fries restaurant food photography" />
+          <div class="photo-badge" id="restaurantPhotoBadge">RESTAURANT MODE 🍟</div>
+        </article>
+        <article class="candy-card restaurant-control-card">
+          <div class="card-title"><span>🍔</span><div><h3>CHOOSE THE PLACE + MENU ITEM</h3><p>NO CALORIE OR MACRO TYPING.</p></div></div>
+          <label class="field-label" for="restaurantChain">RESTAURANT</label>
+          <select id="restaurantChain" class="control"></select>
+          <label class="field-label" for="restaurantItem">MENU ITEM</label>
+          <select id="restaurantItem" class="control"></select>
+          <div class="range-row"><label for="restaurantPortion">PORTION</label><output id="restaurantPortionOut">1.0×</output></div>
+          <input id="restaurantPortion" class="berry-range" type="range" min="0.25" max="2" step="0.25" value="1" />
+          <div id="restaurantPreview" class="mini-nutrition"></div>
+          <p class="nutrition-note" id="restaurantSource">SOURCE STATUS WILL APPEAR HERE.</p>
+          <button id="logRestaurant" class="primary-button full" type="button">LOG RESTAURANT FOOD +25 XP 🍟</button>
+        </article>
+        <aside class="candy-card restaurant-info-card">
+          <span class="big-emoji">🧾</span>
+          <h3>CUSTOM RESTAURANT MODE</h3>
+          <p>THIS STATIC GITHUB WEBSITE WON’T INVENT “EXACT” NUTRITION FOR A BRAND-NEW RESTAURANT. ADD VERIFIED ITEMS ONCE TO <b>RESTAURANT_CHAINS</b> IN <b>app.js</b>, AND THEY IMMEDIATELY BECOME ZERO-TYPING OPTIONS HERE.</p>
+          <div class="restaurant-tags"><span>CHICK-FIL-A</span><span>SHAKE SHACK</span><span>STARBUCKS</span><span>DUNKIN</span><span>CHEESECAKE FACTORY</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="image-strip shell" aria-label="Food photography">
+      <figure><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=82" alt="Fresh sandwich food photography" /><figcaption>STACK IT 🥯</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=82" alt="Chocolate cake food photography" /><figcaption>BAKE IT 🍫</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=82" alt="Coffee in a cup" /><figcaption>SIP IT ☕️</figcaption></figure>
+    </section>
+
+    <section class="shell section" id="recipes">
+      <div class="section-head"><div><span class="eyebrow">THE CCD VAULT</span><h2>212 RECIPES. ZERO BORING SCROLLING. 🍰🥯</h2></div><button class="tiny-button" id="randomRecipe" type="button">SURPRISE ME 🎲</button></div>
+      <div class="recipe-tools candy-card">
+        <label class="search-wrap"><span>🔎</span><input id="recipeSearch" type="search" placeholder="SEARCH CINNAMON, CHOCOLATE, PHILLY…" /></label>
+        <select id="groupFilter" class="control"><option value="all">ALL CCD WORLDS</option></select>
+      </div>
+      <div class="recipe-count" id="recipeCount">SHOWING 212 RECIPES</div>
+      <div class="recipe-grid" id="recipeGrid"></div>
+      <button class="secondary-button load-more" id="loadMore" type="button">SHOW MORE RECIPES ↓</button>
+    </section>
+
+
+
+    <section class="shell section" id="studio">
+      <div class="section-head"><div><span class="eyebrow">CCD RECIPE STUDIO</span><h2>BUILD IT. AUTO-CALCULATE IT. SAVE IT. 🧁🧪</h2></div><span class="studio-badge">NO MANUAL MACROS ✨</span></div>
+      <div class="studio-layout">
+        <article class="candy-card studio-builder">
+          <div class="section-mini"><span class="eyebrow">STEP 1</span><h3>NAME YOUR CREATION 🍓</h3></div>
+          <label class="field-label" for="studioName">RECIPE NAME</label>
+          <input id="studioName" class="control" type="text" maxlength="70" placeholder="EX: CINNAMON CLOUD PANCAKE" />
+          <div class="range-row"><label for="studioServings">SERVINGS</label><output id="studioServingsOut">1 SERVING</output></div>
+          <input id="studioServings" class="berry-range" type="range" min="1" max="8" step="1" value="1" />
+          <div class="pantry-adder">
+            <div><label class="field-label" for="pantrySelect">CCD PANTRY INGREDIENT</label><select id="pantrySelect" class="control"></select></div>
+            <div><div class="range-row"><label for="pantryQty">QUANTITY</label><output id="pantryQtyOut">1</output></div><input id="pantryQty" class="berry-range" type="range" min="0.5" max="8" step="0.5" value="1" /></div>
+            <button id="addIngredient" class="primary-button" type="button">ADD INGREDIENT +</button>
+          </div>
+          <div class="vertical-ingredient-lab" id="studioIngredients"><div class="empty-state">ADD YOUR FIRST INGREDIENT 🥣</div></div>
+        </article>
+
+        <article class="candy-card unit-lab-card">
+          <div class="section-mini"><span class="eyebrow">UNIT NUTRITION LAB</span><h3>TSP · TBSP · CUP — AUTO MATH 🥄📊</h3></div>
+          <p class="unit-lab-intro">FOR SPOONABLE / CUP-MEASURED CCD PANTRY ITEMS. PICK A UNIT + SLIDE THE AMOUNT — NO CALORIE OR MACRO ENTRY.</p>
+          <label class="field-label" for="unitIngredient">INGREDIENT</label>
+          <select id="unitIngredient" class="control"></select>
+          <div class="unit-grid">
+            <label>UNIT<select id="unitSelect" class="control"><option value="tsp">TSP</option><option value="tbsp">TBSP</option><option value="cup">CUP</option></select></label>
+            <div><div class="range-row"><label for="unitAmount">AMOUNT</label><output id="unitAmountOut">1 TSP</output></div><input id="unitAmount" class="berry-range" type="range" min="0.25" max="4" step="0.25" value="1" /></div>
+          </div>
+          <div id="unitNutrition" class="unit-nutrition"></div>
+          <div class="unit-reference" id="unitReference"></div>
+        </article>
+
+        <article class="candy-card studio-nutrition">
+          <div class="section-mini"><span class="eyebrow">STEP 2</span><h3>LIVE NUTRITION CALCULATOR 📊</h3></div>
+          <div class="studio-total"><span>BATCH TOTAL</span><strong id="studioBatchCal">0 KCAL</strong></div>
+          <div class="dialog-macro-grid" id="studioMacroCards"></div>
+          <div class="macro-bars" id="studioMacroBars"></div>
+          <div class="studio-per-serving"><span>PER SERVING</span><strong id="studioPerServing">0 KCAL</strong></div>
+          <label class="field-label" for="studioTaste">WHAT SHOULD IT TASTE / FEEL LIKE?</label>
+          <input id="studioTaste" class="control" type="text" maxlength="150" placeholder="EX: FLUFFY, CINNAMONNY, SOFT CENTER…" />
+          <label class="field-label" for="studioDirections">DIRECTIONS</label>
+          <textarea id="studioDirections" class="control" rows="5" placeholder="WRITE YOUR COOKING STEPS — NUTRITION STILL CALCULATES AUTOMATICALLY."></textarea>
+          <button id="saveStudioRecipe" class="primary-button full" type="button">SAVE TO MY CCD VAULT +40 XP 💜</button>
+        </article>
+        <article class="candy-card custom-vault-card">
+          <div class="section-mini"><span class="eyebrow">MY CREATIONS</span><h3>PERSONAL CCD VAULT 💜</h3></div>
+          <div id="customRecipeVault" class="custom-vault"><div class="empty-state">YOUR SAVED CREATIONS WILL LIVE HERE ✨</div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section" id="battle">
+      <div class="section-head"><div><span class="eyebrow">PLAYABLE FOOD COMPARISON BATTLE</span><h2>CHOOSE YOUR FIGHTERS. 🏆⚡️</h2></div></div>
+      <div class="battle-arena candy-card">
+        <div class="fighter fighter-left"><label for="battleA">FIGHTER A 🍓</label><select id="battleA" class="control"></select><div id="fighterAStats" class="fighter-stats"></div></div>
+        <div class="versus">VS</div>
+        <div class="fighter fighter-right"><label for="battleB">FIGHTER B 🫐</label><select id="battleB" class="control"></select><div id="fighterBStats" class="fighter-stats"></div></div>
+        <div class="battle-controls">
+          <label for="battleMetric">BATTLE MODE</label>
+          <select id="battleMetric" class="control"><option value="protein">PROTEIN POWER 💪🏽</option><option value="fiber">FIBER FUN 🌾</option><option value="calories">CALORIE-LIGHT ⚡️</option><option value="mix">CCD MIX ✨</option></select>
+          <button id="battleButton" class="primary-button full" type="button">BATTLE! 💥</button>
+        </div>
+        <div id="battleWinner" class="battle-winner"><span>🏆</span><strong>READY?</strong><small>PICK TWO RECIPES + HIT BATTLE.</small></div>
+      </div>
+    </section>
+
+    <section class="shell section" id="game">
+      <div class="section-head"><div><span class="eyebrow">BERRY BURST</span><h2>AN ORIGINAL MATCH-3 CCD ARCADE — ACTUALLY PLAYABLE. 🎮🍓</h2></div><div class="game-score"><span>SCORE</span><strong id="gameScore">0</strong></div></div>
+      <div class="game-layout">
+        <div class="candy-card game-card">
+          <div class="game-top"><p>TAP ONE BERRY, THEN AN ADJACENT BERRY. MATCH 3+ TO BURST IT. CASCADES STACK YOUR COMBO. 💥</p><div class="game-actions"><button class="tiny-button" id="shuffleGame" type="button">SHUFFLE ✨</button><button class="tiny-button" id="newGameLevel" type="button">NEW LEVEL 🍓</button></div></div>
+          <div class="game-hud" aria-label="Berry Burst level stats">
+            <div><span>LEVEL</span><strong id="gameLevel">1</strong></div>
+            <div><span>MOVES</span><strong id="gameMoves">25</strong></div>
+            <div><span>LEVEL SCORE</span><strong id="gameLevelScore">0</strong></div>
+            <div><span>TARGET</span><strong id="gameTarget">1000</strong></div>
+          </div>
+          <div id="matchBoard" class="match-board" role="grid" aria-label="Berry Burst original match-three game"></div>
+          <div class="combo-message" id="comboMessage">MAKE YOUR FIRST MATCH 🍓</div>
+        </div>
+        <aside class="candy-card game-side">
+          <span class="big-emoji">🎯</span><h3>BERRY QUEST</h3><p>EVERY MATCH ADDS TO YOUR BERRY XP. BIGGER MATCHES = BIGGER BURSTS.</p>
+          <div class="quest-row"><span>⭐ SCORE 300</span><b id="quest300">○</b></div><div class="quest-row"><span>🔥 SCORE 750</span><b id="quest750">○</b></div><div class="quest-row"><span>👑 SCORE 1500</span><b id="quest1500">○</b></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-head"><div><span class="eyebrow">WHAT’S THE VIBE?</span><h2>PICK YOUR NEXT MOVE. 1 OF 5. 😎</h2></div></div>
+      <div class="choice-five">
+        <button data-jump="#today">1️⃣ LOG A MEAL</button><button data-jump="#recipes">2️⃣ FIND A RECIPE</button><button data-jump="#battle">3️⃣ START A BATTLE</button><button data-jump="#game">4️⃣ PLAY BERRY BURST</button><button id="choiceProfile">5️⃣ EDIT MY PROFILE</button>
+      </div>
+    </section>
+
+    <section class="shell section one-liners">
+      <article class="candy-card"><span>🍓</span><p>CCD RULE #1: COZY FOOD CAN STILL HAVE STRUCTURE.</p></article>
+      <article class="candy-card"><span>✨</span><p>CCD RULE #2: A GOOD RECIPE SHOULD TASTE LIKE YOU’D MAKE IT AGAIN.</p></article>
+      <article class="candy-card"><span>🎮</span><p>CCD RULE #3: IF TRACKING FEELS LIKE HOMEWORK, ADD BERRIES.</p></article>
+    </section>
+
+    <section class="finale">
+      <div class="shell finale-inner"><span>🍓✨🏆</span><h2>LET’S MAKE... 😋😍😎</h2><p>BERRY VIBES STUDIO · COZY CORE DIET · BUILT FOR GITHUB PAGES</p></div>
+    </section>
+  </main>
+
+  <dialog id="recipeDialog" class="recipe-dialog">
+    <button class="dialog-close" id="closeRecipe" type="button" aria-label="Close recipe">✕</button>
+    <div id="recipeDialogBody"></div>
+  </dialog>
+
+  <dialog id="profileDialog" class="profile-dialog">
+    <form method="dialog" class="profile-shell" id="profileForm">
+      <button class="dialog-close" id="closeProfile" value="cancel" aria-label="Close profile">✕</button>
+      <div class="section-mini"><span class="eyebrow">EDITABLE PROFILE</span><h2>MAKE THE SITE YOURS. 💜</h2></div>
+      <div class="profile-grid">
+        <div class="profile-photo-area">
+          <img id="profilePreview" alt="Profile preview" />
+          <label class="secondary-button upload-label">ADD PROFILE PIC 📸<input id="profilePic" type="file" accept="image/*" hidden /></label>
+        </div>
+        <div class="profile-fields">
+          <label>DISPLAY NAME<input id="profileName" class="control" type="text" maxlength="30" placeholder="BERRY BESTIE" /></label>
+          <label>HEIGHT<input id="profileHeight" class="control" type="text" maxlength="20" placeholder="EX: 5'2&quot;" /></label>
+          <label>WEIGHT<input id="profileWeight" class="control" type="number" min="50" max="600" step="0.1" placeholder="USED ONLY FOR BURN ESTIMATES" /></label>
+          <label>WHY I’M USING CCD<textarea id="profileReason" class="control" rows="3" maxlength="240" placeholder="MY REASON..."></textarea></label>
+        </div>
+      </div>
+      <div class="theme-editor">
+        <label>WEBSITE COLOR STYLE<select id="themeSelect" class="control"><option value="berry">BERRY POP 🍓</option><option value="purple">PURPLE POP 💜</option><option value="blueberry">BLUEBERRY DREAM 🫐</option><option value="peach">PEACH FIZZ 🍑</option><option value="mint">TURQUOISE MINT 🌿</option><option value="sunshine">SUNSHINE YELLOW ☀️</option><option value="orange">ORANGE FIZZ 🍊</option><option value="red">CHERRY RED 🍒</option><option value="gray">SOFT GRAY 🩶</option><option value="cloud">CLOUD WHITE ☁️</option><option value="magenta">MAGENTA POP 💗</option><option value="midnight">MIDNIGHT BERRY 🌙</option></select></label>
+        <label>ACCENT COLOR<input id="accentColor" type="color" value="#7f3cff" /></label>
+      </div>
+      <button id="saveProfile" class="primary-button full" value="default">SAVE PROFILE ✨</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>
